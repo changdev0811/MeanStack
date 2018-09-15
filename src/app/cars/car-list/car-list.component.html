@@ -1,0 +1,34 @@
+
+<div class="row">
+  <div class="col-xs-12">
+    <app-car-item
+    *ngFor="let carEl of cars; let i = index"
+    [car]="carEl"
+    [indexOfCar]="i">
+    </app-car-item>
+  </div>
+</div>
+
+
+<!--<mat-paginator [length]="totalCars" [pageSize]="carsperPage" [pageSizeOptions]="pageSizeOptions" (page)="onChangedPage($event)"
+               *ngIf="cars.length > 0"></mat-paginator>
+<p class="info-text mat-body-1" *ngIf="cars.length <= 0 && !isLoading">No posts added yet!</p>
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<mat-accordion multi="true" *ngIf="cars.length > 0 && !isLoading">
+  <mat-expansion-panel *ngFor="let car of cars">
+    <mat-expansion-panel-header>
+      {{ car.title }}
+    </mat-expansion-panel-header>
+    <div class="car-image">
+      <img [src]="car.imagePath" [alt]="car.title">
+    </div>
+    <p>{{ car.content }}</p>
+    <mat-action-row *ngIf="userIsAuthenticated">
+      <a mat-button color="primary" [routerLink]="['/edit', car.id]">EDIT</a>
+      <button mat-button color="warn" (click)="onDelete(car.id)">DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>-->
+
+
+

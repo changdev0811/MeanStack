@@ -1,0 +1,17 @@
+<div class="row">
+    <a style="cursor: pointer;"
+       [routerLink]="[indexOfCar]"
+       routerLinkActive="active"
+       class="list-group-item clearfix">
+        <div class="pull-left">
+          <h4 class="list-group-item-heading">{{ car.title }}</h4>
+          <p class="list-group-item-text">{{ car.content }}</p>
+        </div>
+        <span class="pull-right">
+          <img [src]= "car.imagePath"
+            alt= "{{ car.title }}"
+            class= "img-responsive"
+            style="max-height: 50px;">
+        </span>
+    </a>
+</div>

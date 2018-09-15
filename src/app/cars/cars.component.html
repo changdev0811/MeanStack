@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-5">
+      <app-car-list
+      (carWasSelected)="selectedCar = $event"></app-car-list>
+  </div>
+  <div class="col-md-7">
+    <router-outlet></router-outlet>
+      <p>Please select a Car</p>
+  </div>
+</div>
+
+
+<app-car-detail *ngIf="selectedCar; else infoText"
+                    [car]="selectedCar"> </app-car-detail>
+    <ng-template #infoText></ng-template>
